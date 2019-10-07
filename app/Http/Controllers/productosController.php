@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
+use App\Producto;
+
 
 class productosController extends Controller
 {
@@ -11,13 +13,20 @@ class productosController extends Controller
         $productos = App\Producto::all();
         return view('productos/listar',compact('productos'));
     }
-
     public function detalle($id){//recibe parametro enviado en la ruta
         $productos = App\Producto::findOrFail($id);//valida id si no redirige a 404
         //$producto captura detalles del producto con $id.
         return view ('productos.detalle',compact('productos'));//(. es igual /)
 
     }
+
+    public function verdetalle($id){
+      //recibe parametro enviado en la ruta
+      $detalleproducto = App\Producto::findOrFail($id);//valida id si no redirige a 404
+      //$producto captura detalles del producto con $id.
+      return view ('productos.listar',compact('detalleproducto'));//(. es igual /)
+    }
+
     public function crear(Request $request){
       //return $request->all();#para verificar
 

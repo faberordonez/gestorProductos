@@ -1,2 +1,2 @@
-<h1>Detalle de nota</h1>
+<h1>Detalle de Producto</h1>
 <h4>{{$productos->nombreProducto}}</h4>

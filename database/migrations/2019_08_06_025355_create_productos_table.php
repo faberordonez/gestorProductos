@@ -26,7 +26,7 @@ class CreateProductosTable extends Migration
             $table->integer('precioExProd')->nullable();
             $table->integer('inventarioProd')->nullable();
             $table->integer('tipoProducto_id')->nullable();
-            $table->integer('marca_id')->nullable();
+            $table->unsignedInteger('marca_id')->nullable();
 
             //$table->foreign('tipoProducto_id')->references('id')->on('tipoProducto');
             //$table->foreign('marca_id')->references('id')->on('marcas');

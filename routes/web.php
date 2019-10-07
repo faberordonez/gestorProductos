@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/productos','productosController@index');
+use App\Libro;
+
+Route::get('/productos','productosController@index')->name('productos.listar');
+Route::get('/productos/{id}','productosController@verdetalle')->name('productos.verdetalle');
 Route::get('/productos/detalle/{id}','productosController@detalle')->name('productos.detalle');//envia parametro recibido de la vista
 Route::view('crear','productos.crear');
 Route::post('/','productosController@crear')->name('productos.crear');
