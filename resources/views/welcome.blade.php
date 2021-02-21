@@ -255,7 +255,7 @@
       </style>
     </head>
     <body>
-        <div class="container">
+        <div class="h100"><!--h100 centra contenedor -->
             <form>
                 <div class="svgContainer">
                     <div>
